@@ -15,6 +15,7 @@ def make():
         res = requests.get(getImg(query))
     with open("img.jpg","wb") as f:
         f.write(res.content)
+    return query
 
 def getRandom():
     url = "https://www.wikihow.com/Special:Randomizer"
